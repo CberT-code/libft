@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbertola <cbertola@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cyrillebertola <cyrillebertola@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 10:07:28 by cbertola          #+#    #+#             */
-/*   Updated: 2019/11/18 15:59:34 by cbertola         ###   ########.fr       */
+/*   Updated: 2020/04/09 13:56:10 by cyrillebert      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int			ft_strlen(char *str)
 	return (i);
 }
 
-char		*ft_strjoin(char *s1, char *s2)
+char		*ft_strjoin_free(char *s1, char *s2)
 {
 	char		*ptr;
 	long int	u;
@@ -63,14 +63,14 @@ char		*ft_before_char(char *str, char stop)
 	return (str);
 }
 
-char		*ft_send(t_list **lst, char **line)
+char		*ft_send(t_gnl **lst, char **line)
 {
 	char	*str;
 	char	*new;
 	int		i;
 	int		j;
 
-	i = ft_find((*lst)->str, '\n');
+	i = ft_finded((*lst)->str, '\n');
 	if (!(str = malloc(i * sizeof(char))))
 		return (NULL);
 	if (!(new = malloc((ft_strlen((*lst)->str) - i) * sizeof(char) + 1)))
@@ -91,7 +91,7 @@ char		*ft_send(t_list **lst, char **line)
 	return (new);
 }
 
-int			ft_find(char *str, char stop)
+int			ft_finded(char *str, char stop)
 {
 	int i;
 

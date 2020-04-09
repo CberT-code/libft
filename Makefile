@@ -6,7 +6,7 @@
 #    By: cyrillebertola <cyrillebertola@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/09 12:20:26 by cbertola          #+#    #+#              #
-#    Updated: 2020/04/09 13:31:42 by cyrillebert      ###   ########.fr        #
+#    Updated: 2020/04/09 13:58:59 by cyrillebert      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ SRC		= ft_strlcpy.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_strlcat.c \
 		  ft_memmove.c ft_memchr.c ft_memcmp.c ft_atoi.c ft_calloc.c ft_strdup.c \
 		  ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
 		  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+		  ft_replace.c ft_strcmp.c is_tab_full.c \
 		  gnl/get_next_line.c gnl/get_next_line_utils.c printf/srcs/ft_printf.c \
 		  printf/srcs/ft_flags.c printf/srcs/ft_fct.c printf/srcs/ft_cs.c \
 		  printf/srcs/ft_p.c printf/srcs/ft_diu.c printf/srcs/ft_x.c ft_strlen.c
