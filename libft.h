@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbertola <cbertola@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cyrillebertola <cyrillebertola@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 11:59:00 by cbertola          #+#    #+#             */
-/*   Updated: 2019/12/12 22:28:26 by cbertola         ###   ########.fr       */
+/*   Updated: 2020/04/09 13:41:15 by cyrillebert      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include "gnl/get_next_line.h"
+# include "printf/srcs/ft_printf.h"
 
 typedef struct	s_list
 {
@@ -75,5 +77,7 @@ void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 		void (*del)(void *));
 int				ft_isfind(char *str, char stop);
+int						is_tab_full(char *tab, char c);
+char					*ft_replace(char *str, char out, char in);
 
 #endif
