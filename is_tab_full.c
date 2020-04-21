@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   is_tab_full.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbertola <cbertola@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/17 15:12:22 by cbertola          #+#    #+#             */
-/*   Updated: 2019/10/24 12:33:33 by cbertola         ###   ########.fr       */
+/*   Created: 2020/01/26 23:25:47 by cbertola          #+#    #+#             */
+/*   Updated: 2020/04/20 16:36:39 by cbertola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putstr_fd(char *str, int fd)
+int		is_tab_full(char *tab, char c)
 {
-	if (fd < 0 || !str)
-		return ;
-	while (*str)
-		ft_putchar_fd(*str++, fd);
+	int i;
+
+	i = 0;
+	while (tab[i])
+		if (tab[i++] != c)
+			return (0);
+	return (1);
 }

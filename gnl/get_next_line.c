@@ -6,16 +6,16 @@
 /*   By: cbertola <cbertola@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 11:30:10 by cbertola          #+#    #+#             */
-/*   Updated: 2019/11/18 16:13:38 by cbertola         ###   ########.fr       */
+/*   Updated: 2020/04/20 16:35:10 by cbertola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int			search_fd(t_list **lst_one, int fd)
+int			search_fd(t_gnl **lst_one, int fd)
 {
-	t_list		*first;
-	t_list		*front;
+	t_gnl		*first;
+	t_gnl		*front;
 
 	if (!*lst_one)
 		return (0);
@@ -39,11 +39,11 @@ int			search_fd(t_list **lst_one, int fd)
 	return (0);
 }
 
-void		ft_new_lst(int fd, t_list **lst_one)
+void		ft_new_lst(int fd, t_gnl **lst_one)
 {
-	t_list	*lst;
+	t_gnl	*lst;
 
-	if (!(lst = malloc(sizeof(t_list))))
+	if (!(lst = malloc(sizeof(t_gnl))))
 		return ;
 	lst->fd = fd;
 	lst->next = *lst_one ? *lst_one : 0;
@@ -51,25 +51,25 @@ void		ft_new_lst(int fd, t_list **lst_one)
 	*lst_one = lst;
 }
 
-void		ft_del(t_list **lst_one)
+void		ft_del(t_gnl **lst_one)
 {
-	t_list		*lst;
+	t_gnl		*lst;
 
 	lst = (*lst_one)->next;
 	free(*lst_one);
 	*lst_one = lst;
 }
 
-int			ft_exist(t_list **lst, char **line)
+int			ft_exist(t_gnl **lst, char **line)
 {
 	if (!(*lst)->buff && !(*lst)->str)
 		return (-1);
 	if ((*lst)->buff)
 	{
-		(*lst)->str = ft_strjoin((*lst)->str, (*lst)->buff);
+		(*lst)->str = ft_strjoin_free((*lst)->str, (*lst)->buff);
 		(*lst)->buff = NULL;
 	}
-	if (ft_find((*lst)->str, '\n'))
+	if (ft_finded((*lst)->str, '\n'))
 	{
 		(*lst)->str = ft_send(lst, line);
 		return (1);
@@ -86,13 +86,13 @@ int			ft_exist(t_list **lst, char **line)
 int			get_next_line(int fd, char **line)
 {
 	int				retour;
-	static t_list	*lst_one;
+	static t_gnl	*lst_one;
 
 	if (fd < 0 || BUFFER_SIZE < 1)
 		return (-1);
 	if (search_fd(&lst_one, fd))
 	{
-		if (ft_find(lst_one->str, '\n') || lst_one->read < BUFFER_SIZE)
+		if (ft_finded(lst_one->str, '\n') || lst_one->read < BUFFER_SIZE)
 			return (ft_exist(&lst_one, line));
 	}
 	else

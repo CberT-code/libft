@@ -6,7 +6,7 @@
 /*   By: cbertola <cbertola@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 15:27:36 by cbertola          #+#    #+#             */
-/*   Updated: 2019/10/21 12:47:43 by cbertola         ###   ########.fr       */
+/*   Updated: 2020/04/20 16:36:15 by cbertola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!(s1 && s2))
 		return (NULL);
-	u = ft_strlen(s1);
-	v = ft_strlen(s2);
+	u = ft_strlen((char *)s1);
+	v = ft_strlen((char *)s2);
 	i = -1;
 	if (!(ptr = malloc((u + v) * (sizeof(char) + 1))))
 		return (NULL);

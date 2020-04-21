@@ -6,12 +6,11 @@
 /*   By: cbertola <cbertola@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 15:47:22 by cbertola          #+#    #+#             */
-/*   Updated: 2019/10/21 12:53:41 by cbertola         ###   ########.fr       */
+/*   Updated: 2020/04/21 08:38:23 by cbertola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <libc.h>
 
 static int		ft_find(char c, char const *set)
 {
@@ -30,7 +29,7 @@ char			*ft_strtrim(char const *s1, char const *set)
 
 	if (!(s1 && set))
 		return (0);
-	u = ft_strlen(s1);
+	u = ft_strlen((char *)s1);
 	i = 0;
 	while (ft_find(s1[i], set) == 1 && s1[i])
 		i++;

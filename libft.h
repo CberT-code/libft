@@ -6,7 +6,7 @@
 /*   By: cbertola <cbertola@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 11:59:00 by cbertola          #+#    #+#             */
-/*   Updated: 2019/12/12 22:28:26 by cbertola         ###   ########.fr       */
+/*   Updated: 2020/04/20 16:36:27 by cbertola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include <sys/types.h>
+# include <sys/uio.h>
+# include <fcntl.h>
+# include <stdio.h>
+# include "gnl/get_next_line.h"
+# include "printf/srcs/ft_printf.h"
 
 typedef struct	s_list
 {
@@ -23,7 +29,7 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
-int				ft_strlen(const char *s);
+int				ft_strlen(char *s);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char			*ft_strchr(const char *s, int c);
@@ -75,5 +81,8 @@ void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 		void (*del)(void *));
 int				ft_isfind(char *str, char stop);
+int				is_tab_full(char *tab, char c);
+char			*ft_replace(char *str, char out, char in);
+int				ft_strcmp(const char *s1, const char *s2);
 
 #endif

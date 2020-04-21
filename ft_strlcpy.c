@@ -6,7 +6,7 @@
 /*   By: cbertola <cbertola@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 17:13:04 by cbertola          #+#    #+#             */
-/*   Updated: 2019/10/24 15:25:00 by cbertola         ###   ########.fr       */
+/*   Updated: 2020/04/20 16:36:09 by cbertola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	j = 0;
 	if (dstsize <= 0 && (!src || !dst))
-		return (ft_strlen(src));
+		return (ft_strlen((char *)src));
 	while (src[j])
 		j++;
 	if (j + 1 < dstsize)

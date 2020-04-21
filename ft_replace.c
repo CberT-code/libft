@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_replace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbertola <cbertola@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/14 14:22:58 by cbertola          #+#    #+#             */
-/*   Updated: 2019/10/16 12:04:24 by cbertola         ###   ########.fr       */
+/*   Created: 2020/03/24 14:21:44 by cyrillebert       #+#    #+#             */
+/*   Updated: 2020/04/20 16:36:58 by cbertola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+char		*ft_replace(char *str, char out, char in)
 {
-	unsigned char *s;
-	unsigned char *t;
+	int		i;
+	char	*ptr;
 
-	s = (unsigned char *)s1;
-	t = (unsigned char *)s2;
-	while (n--)
-		if (*s++ != *t++)
-			return (*--s - *--t);
-	return (0);
+	if (!(ptr = malloc(sizeof(char) * (ft_strlen(str) + 1))))
+		return (NULL);
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == out)
+			ptr[i] = in;
+		else
+			ptr[i] = str[i];
+		i++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
 }

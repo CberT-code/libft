@@ -6,7 +6,7 @@
 /*   By: cbertola <cbertola@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 13:44:25 by cbertola          #+#    #+#             */
-/*   Updated: 2019/10/21 15:01:52 by cbertola         ###   ########.fr       */
+/*   Updated: 2020/04/20 16:36:46 by cbertola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!(s))
 		return (NULL);
-	u = ft_strlen(s);
+	u = ft_strlen((char *)s);
 	i = 0;
 	if (!(ptr = malloc(u * sizeof(char) + 1)))
 		return (NULL);
