@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_replace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbertola <cbertola@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cyrillebertola <cyrillebertola@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 14:21:44 by cyrillebert       #+#    #+#             */
+<<<<<<< HEAD:ft_replace.c
 /*   Updated: 2020/04/20 16:36:58 by cbertola         ###   ########.fr       */
+=======
+/*   Updated: 2020/04/08 20:03:11 by cyrillebe        ###   ########.fr       */
+>>>>>>> 265af25aaeb7a3c56fdb2176d43cbc674f340a8e:printf/libft/ft_strdup.c
 /*                                                                            */
 /* ************************************************************************** */
 

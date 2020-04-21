@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbertola <cbertola@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cyrillebertola <cyrillebertola@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 15:27:36 by cbertola          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2020/04/20 16:36:15 by cbertola         ###   ########.fr       */
+=======
+/*   Updated: 2020/04/09 13:53:34 by cyrillebert      ###   ########.fr       */
+>>>>>>> 265af25aaeb7a3c56fdb2176d43cbc674f340a8e
 /*                                                                            */
 /* ************************************************************************** */
 
