@@ -3,14 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cyrillebertola <cyrillebertola@student.    +#+  +:+       +#+        */
+/*   By: cbertola <cbertola@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 17:13:04 by cbertola          #+#    #+#             */
-<<<<<<< HEAD
 /*   Updated: 2020/04/20 16:36:09 by cbertola         ###   ########.fr       */
-=======
-/*   Updated: 2020/04/09 13:51:50 by cyrillebert      ###   ########.fr       */
->>>>>>> 265af25aaeb7a3c56fdb2176d43cbc674f340a8e
 /*                                                                            */
 /* ************************************************************************** */
 
