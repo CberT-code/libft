@@ -6,15 +6,16 @@
 #    By: cbertola <cbertola@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/09 12:20:26 by cbertola          #+#    #+#              #
-#    Updated: 2019/12/10 11:49:51 by cbertola         ###   ########.fr        #
+#    Updated: 2020/04/26 11:31:06 by cbertola         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 SRCS		= srcs/ft_printf.c srcs/ft_flags.c srcs/ft_fct.c \
 				srcs/ft_cs.c srcs/ft_p.c srcs/ft_diu.c srcs/ft_x.c
 
 OBJS		= ${SRCS:.c=.o}
 
-LIBFT		= libft
+LIBFT		= ../
 
 NAME_LIBFT	= libft.a
 
@@ -30,7 +31,7 @@ all:		${NAME}
 
 ${NAME}:    ${OBJS}
 			@make -C $(LIBFT)
-			@cp libft/libft.a ./$(NAME)
+			@cp ../libft.a ./$(NAME)
 			@ar rc $(NAME) $(OBJS)
 			@ranlib $(NAME)
 clean:      
